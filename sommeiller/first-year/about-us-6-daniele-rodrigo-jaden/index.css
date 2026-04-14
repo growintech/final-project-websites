@@ -1,0 +1,39 @@
+.navigation p {
+    background-color:rgba(77, 79, 79, 0.405);
+    width: 100%;
+    margin: 5px;
+    display: inline;
+    font-family: arial;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color:rgb(11, 121, 24);
+} 
+ 
+
+
+
+.navigation p {
+    background-color:rgba(77, 79, 79, 0.405);
+    width: 100%;
+    margin: 5px;
+    display: inline;
+    font-family: arial;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color:rgb(11, 121, 24);
+} 
+ 
