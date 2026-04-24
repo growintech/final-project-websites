@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark - Chi Siamo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">Spark<span>.</span></div>
+            <button id="menu-btn" onclick="toggleMenu()" aria-label="Apri menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <nav class="nav-wrapper">
+        <ul class="nav-links">
+            <li><a href="homepage.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="products-activities.html#prestiti"><i class="fas fa-hand-holding-heart"></i> <span>Prestiti</span></a></li>
+            <li><a href="products-activities.html#products-activities"><i class="fas fa-store"></i> <span>Prodotti & Attività</span></a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span>Chi Siamo</span></a></li>
+            <li class="nav-separator"><a href="javascript:void(0)" onclick="toggleDarkMode()" id="theme-toggle"><i class="fas fa-moon"></i> <span>Notte</span></a></li>
+            <li><a href="homepage.html#sezione5"><i class="fas fa-paper-plane"></i> <span>Contatti</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <div class="sezione-header fade-in">
+                <h2>Chi Siamo & La Nostra Missione</h2>
+                <p>Scopri il team dietro Spark e i nostri obiettivi.</p>
+            </div>
+            <div class="about-content fade-in">
+                <p>Spark nasce dall'idea di dare nuova vita agli oggetti e alle passioni. Crediamo in un mondo dove la condivisione e il riuso non solo riducono gli sprechi, ma creano anche nuove opportunità per esplorare hobby e connettersi con la comunità. Ogni oggetto ha una storia, e noi vogliamo aiutarti a scriverne il prossimo capitolo.</p>
+                <div class="about-image-container">
+                    <img src="https://via.placeholder.com/800x500?text=Il+Nostro+Team" alt="Il nostro team al lavoro" class="about-image">
+                </div>
+                <h3>La Scintilla di Spark</h3>
+                <p>Il nostro obiettivo è quello di creare un sito di condivisione di hobby, oggettistica varia e molte altre cose usate, ma mantenute perlomeno in buone condizioni. Da noi potrai anche comprare oggetti usati ed eventualmente ricondizionati. Vogliamo essere il punto di riferimento per chi cerca un modo sostenibile e divertente per vivere le proprie passioni.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="site.js"></script>
+</body>
+</html>

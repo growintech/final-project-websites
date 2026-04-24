@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Irina & Alessandro</title>
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="AboutUS.css">
+</head>
+<body>
+    <!-- Main container for the entire page -->
+    <div class="container">
+
+        <!-- Header section with title -->
+        <header class="header">
+            <h1 class="main-title">Meet Irina & Alessandro</h1>
+            <p class="subtitle">Two amazing teenagers on an incredible journey</p>
+        </header>
+
+        <!-- Section for individual profiles -->
+        <section class="profiles-section">
+
+            <!-- Irina's profile card -->
+            <div class="profile-card" data-person="irina">
+                <div class="photo-slot">
+                    <!-- Placeholder for Irina's photo -->
+                    
+                    <div class="photo-placeholder"> 
+                        <img src="Iri.jpg" alt="Irina" >
+                        <span class="initial"></span>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Irina</h2>
+                    <p class="profile-description">
+A lively, noisy girl. She enjoys sports and trying new things. She enjoys challenges, and computer science stimulates her creativity and pushes her to never give up. 
+                    </p>
+                    <button class="learn-more-btn" data-target="irina">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Alessandro's profile card -->
+            <div class="profile-card" data-person="alessandro">
+                <div class="photo-slot">
+                    <!-- Placeholder for Alessandro's photo -->
+                    <div class="photo-placeholder">
+                        <img src="Ale.jpg" alt="Alessandro" >
+                        <span class="initial"></span>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Alessandro</h2>
+                    <p class="profile-description">
+A seemingly reserved and shy boy. In reality, he's also full of energy. Gifted in math and physics, he devoted himself to a course at his school and discovered a passion for computer science. 
+                    </p>
+                    <button class="learn-more-btn" data-target="alessandro">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section for the together photo -->
+        <section class="together-section">
+            <h2 class="section-title">Together</h2>
+            <div class="together-photo-container">
+                <div class="together-photo-slot">
+                    <!-- Placeholder for photo of both together -->
+                    <div class="together-placeholder">
+                        <img src="Tgh2.jpg" alt="together" >
+                        <span class="initial"></span>
+                    </div>
+                </div>
+                <p class="together-description">
+Friends since freshman year of high school, always laughing and making fun together. They (almost) always give their best, and today they bring you a website to solve a problem that plagues them daily: The fight against public transportation and rides...
+                </p>
+            </div>
+        </section>
+    
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Irina & Alessandro | Made with ❤️</p>
+        </footer>
+    </div>
+
+    <!-- Link to our JavaScript file (at the end so HTML loads first) -->
+    <script src="AboutUS.js"></script>
+</body>
+</html>

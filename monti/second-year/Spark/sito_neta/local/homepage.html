@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <header id="header" class="header-main">
+        <div class="header-container">
+            <div class="logo">Spark<span>.</span></div>
+            <button id="menu-btn" onclick="toggleMenu()" aria-label="Apri menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <nav class="nav-wrapper">
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="#prestiti"><i class="fas fa-hand-holding-heart"></i> <span>Prestiti</span></a></li>
+            <li><a href="#products-activities"><i class="fas fa-store"></i> <span>Prodotti & Attività</span></a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> <span>Chi Siamo</span></a></li>
+            <li><a href="#sezione5"><i class="fas fa-paper-plane"></i> <span>Contatti</span></a></li>
+            <li class="nav-separator"><a href="javascript:void(0)" onclick="toggleDarkMode()" id="theme-toggle"><i class="fas fa-moon"></i> <span>Notte</span></a></li>
+            <li><a href="javascript:void(0)" onclick="apriLogin()" class="nav-login"><i class="fas fa-user-circle"></i> <span>Area Riservata</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div class="decorazione-sfondo scuro"></div>
+            <div class="decorazione-sfondo chiaro"></div>
+            
+            <div class="spazio-centrale fade-in">
+                <h1>Sperimenta <span class="highlight">Passioni.</span></h1>
+                <h1>Senza <span class="highlight">Impegni.</span></h1>
+                <h2 class="slogan">Hobby creativi a prezzi da studenti. Prova per un weekend, decidi dopo.</h2>
+                <div class="bottoni-home">
+                    <a href="#prestiti" class="btn-primario">Esplora i Kit di Prova</a>
+                    <a href="javascript:void(0)" onclick="apriLogin()" class="btn-secondario">Login</a>
+                </div>
+            </div>
+            <div class="descrizione fade-in">
+                <p>Niente più tutorial infiniti senza toccare con mano. Spark ti fornisce l'attrezzatura e la guida per iniziare subito a suonare, scattare o disegnare.</p>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="sezione-header fade-in">
+                <h2>Zero Rischi, Tutto Spark</h2>
+                <p>Perché spendere centinaia di euro per un hobby che forse non ti piacerà?</p>
+            </div>
+            <div class="grid-container">
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-search"></i></div>
+                    <h3>Scegli un Kit</h3>
+                    <p>Dalla fotografia al DJing, scegli l'attrezzatura base per iniziare.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Prova nel Weekend</h3>
+                    <p>Costi minimi per pochi giorni. Sperimenta senza ansia da portafoglio.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon"><i class="fas fa-undo"></i></div>
+                    <h3>Restituisci o Continua</h3>
+                    <p>Ti piace? Ti aiutiamo a trovare il tuo. Non fa per te? Nessun problema.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                 <span class="badge">Student Discount Active: -20% con email .edu o .it</span>
+            </div>
+        </section>
+
+        <!-- Sezione Prestiti (da products-activities.html) -->
+        <section id="prestiti">
+            <div class="sezione-header fade-in">
+                <h2>Kit Sperimentali</h2>
+                <p>Attrezzatura beginner-friendly pronta all'uso per il tuo prossimo weekend creativo.</p>
+            </div>
+            
+            <div class="lista-prestiti">
+                <div class="card-prestito fade-in">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=400" alt="Kit Fotografia">
+                    <div class="testo-prestito">
+                        <h3>Kit Fotografia Street (Mirrorless + 35mm)</h3>
+                        <p>Perfetto per iniziare a scattare in città. Include guida rapida ISO/Diaframma.</p>
+                        <span class="price-tag">€12 / Weekend</span>
+                    </div>
+                </div>
+
+                <div class="card-prestito fade-in">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=400" alt="Kit Podcast">
+                    <div class="testo-prestito">
+                        <h3>Kit Home Recording & Podcast</h3>
+                        <p>Microfono a condensatore + Scheda Audio USB. Registra la tua voce subito.</p>
+                        <span class="price-tag">€8 / Weekend</span>
+                    </div>
+                </div>
+
+                <div class="card-prestito fade-in">
+                    <img src="https://images.unsplash.com/photo-1544652478-6653e09f18a2?q=80&w=400" alt="Kit Sintetizzatore">
+                    <div class="testo-prestito">
+                        <h3>Pocket Synth & Beatmaker</h3>
+                        <p>Crea la tua prima traccia lo-fi. Non serve esperienza musicale.</p>
+                        <span class="price-tag">€10 / Weekend</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Prodotti & Attività (da products-activities.html) -->
+        <section id="products-activities">
+            <div class="sezione-header fade-in">
+                <h2>Le Aree Creative</h2>
+                <p>Scegli il tuo campo di battaglia. Abbiamo selezionato gli hobby più amati dagli studenti.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=600" alt="Digital Design">
+                    <div class="portfolio-overlay">
+                        <h3>Digital Design</h3>
+                        <p>Tavolette grafiche e licenze software temporanee.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600" alt="Produzione Musicale">
+                    <div class="portfolio-overlay">
+                        <h3>Musica & Beats</h3>
+                        <p>Strumenti MIDI e guide per iniziare su Ableton o FL Studio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sezione-header fade-in" style="margin-top: 80px;">
+                <h2>Le Nostre Attività</h2>
+                <p>Non solo oggetti, ma anche esperienze! Scopri come Spark può accendere nuove passioni.</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-item fade-in">
+                    <img src="https://via.placeholder.com/400x300?text=Workshop+Fotografia" alt="Workshop di fotografia" class="activity-image">
+                    <h3>Workshop di Fotografia</h3>
+                    <p>Impara le basi della fotografia digitale con i nostri esperti.</p>
+                </div>
+                <div class="activity-item fade-in">
+                    <img src="https://via.placeholder.com/400x300?text=Escursioni+in+Bici" alt="Escursioni in bici" class="activity-image">
+                    <h3>Escursioni in Bici</h3>
+                    <p>Unisciti ai nostri gruppi per esplorare nuovi percorsi in mountain bike.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Chi Siamo (da about.html) -->
+        <section id="about">
+            <div class="sezione-header fade-in">
+                <h2>Chi Siamo & La Nostra Missione</h2>
+                <p>Scopri il team dietro Spark e i nostri obiettivi.</p>
+            </div>
+            <div class="about-content fade-in" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>Spark nasce dall'idea di dare nuova vita agli oggetti e alle passioni. Crediamo in un mondo dove la condivisione e il riuso non solo riducono gli sprechi, ma creano anche nuove opportunità per esplorare hobby e connettersi con la comunità.</p>
+                <p>Il nostro obiettivo è quello di creare un punto di riferimento per chi cerca un modo sostenibile e divertente per vivere le proprie passioni.</p>
+            </div>
+        </section>
+
+        <section id="sezione5">
+            <div class="sezione-header fade-in">
+                <h2>Contatti</h2>
+                <p>Hai domande, suggerimenti o vuoi segnalare un problema? Contattaci!</p>
+            </div>
+            <div class="contact-container">
+                <div class="card info-contatti fade-in">
+                    <h3>I nostri recapiti</h3>
+                    <p><i class="fas fa-envelope"></i> sparksupport@libero.it</p>
+                    <p><i class="fas fa-phone"></i> +39 ...</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Via ...</p>
+                </div>
+                <form class="contact-form fade-in">
+                    <input type="text" placeholder="Il tuo nome" required>
+                    <input type="email" placeholder="La tua email" required>
+                    <textarea placeholder="Il tuo messaggio" rows="5" required></textarea>
+                    <button type="button" class="btn-primario">Invia Messaggio</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlay Login integrato (da login.html) -->
+    <div id="login-overlay" class="login-container">
+        <div class="login-box">
+            <button class="close-login" onclick="chiudiLogin()">&times;</button>
+            <div class="login-icon-header">
+                <i class="fas fa-user-shield"></i>
+            </div>
+            <h2>Accedi o Registrati</h2>
+            
+            <form class="login-form" id="form-accesso" onsubmit="gestisciAccesso(event)">
+                <input class="login-button"type="text" id="nome" placeholder="Nome" required>
+                <input class="login-button" type="text" id="cognome" placeholder="Cognome" required>
+                <input class="login-button" type="email" id="email" placeholder="Email" required>
+                <input class="login-button" type="tel" id="telefono" placeholder="Recapito telefonico" required>
+                
+                <button type="submit" class="btn-primario" style="width: 100%;">Registrati / Accedi</button>
+            </form>
+
+            <a href="javascript:void(0)" onclick="chiudiLogin()" class="torna-home"><i class="fas fa-times"></i> Annulla e torna alla home</a>
+        </div>
+    </div>
+
+    <script src="site.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

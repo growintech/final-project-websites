@@ -1,17 +1,13 @@
  // ===== HAMBURGER MENU FUNCTIONALITY =====
-  const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
-  
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+  {
       navMenu.classList.toggle('active');
-  });
+  };
   
   // Close menu when a link is clicked
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
       link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
           navMenu.classList.remove('active');
       });
   });
@@ -55,46 +51,44 @@
   startCountdown();
   
   // ===== IMAGE CAROUSEL =====
-  const images = [
-      'https://images.unsplash.com/photo-1503126613408-eca07ce68773?w=600&h=400&fit=crop',
-      'https://images.unsplash.com/photo-1576092160589-2173dba999ef?w=600&h=400&fit=crop',
-      'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop',
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop',
-      'https://images.unsplash.com/photo-1559027615-cd1628b63df4?w=600&h=400&fit=crop'
-  ];
-  
-  const captions = [
-      'Commuting made easy',
-      'Never miss a connection',
-      'Real-time updates for your journey',
-      'Travel with confidence',
-      'Join thousands of young commuters'
-  ];
-  
-  let currentImageIndex = 0;
-  
-  function changeImage() {
-      const carouselImage = document.getElementById('carouselImage');
-      const galleryCaption = document.getElementById('galleryCaption');
-  
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-  
-      // Fade out effect
-      carouselImage.style.opacity = '0.5';
-  
-      setTimeout(() => {
-          carouselImage.src = images[currentImageIndex];
-          galleryCaption.textContent = captions[currentImageIndex];
-          carouselImage.style.opacity = '1';
-      }, 250);
-  }
-  
-  // Change image every 1.5 seconds
-  setInterval(changeImage, 1500);
-  
-  // Add smooth transition to carousel image
-  const carouselImage = document.getElementById('carouselImage');
-  carouselImage.style.transition = 'opacity 0.5s ease';
+    const immagini = [
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg",
+      "img4.jpg",
+      "img5.jpg"
+    ];
+
+  // current img
+    let indiceCorrente = 0;
+
+  // Select the HTML element
+    const tagImmagine = document.getElementById("mainImage");
+    const btnAvanti = document.getElementById("nextBtn");
+    const btnIndietro = document.getElementById("prevBtn");
+
+  // Encrease or decrease img
+    function aggiornaImmagine() {
+      tagImmagine.src = immagini[indiceCorrente];
+    }
+
+  // next img
+    btnAvanti.onclick = function() {
+        indiceCorrente++; 
+        if (indiceCorrente >= immagini.length) {
+            indiceCorrente = 0; // if it finishes, restart
+        }
+        aggiornaImmagine();
+    };
+
+  // before img
+    btnIndietro.onclick = function() {
+        indiceCorrente--; 
+        if (indiceCorrente < 0) {
+            indiceCorrente = immagini.length - 1; // if goes below zero go to the last one
+        }
+        aggiornaImmagine();
+    };
   
   // ===== CONTACT FORM SUBMISSION =====
   const contactForm = document.getElementById('contactForm');
@@ -120,7 +114,7 @@
       }
   
       // Show success message
-      alert(`✅ Success! Thank you, ${name}!\n\nWe've received your message and will contact you at ${email} when TrackBus launches.\n\nGet ready to never miss a bus again! 🚌`);
+      alert(`✅ Success! Thank you, ${name}!\n\nWe've received your message and will contact you at ${email} when TrackBus launches.\n\nGet ready to never be on foot again! 🚌`);
   
       // Reset form
       contactForm.reset();

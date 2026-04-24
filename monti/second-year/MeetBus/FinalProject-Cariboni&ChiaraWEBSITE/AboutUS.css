@@ -1,0 +1,320 @@
+/* ========================================
+   BASIC RESET & SETUP
+   ======================================== */
+
+/* Remove default margins and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width/height include padding and border */
+}
+
+/* Set up the body with our color scheme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000; /* Black background */
+    color: #fbff00; /* Gold/Yellow text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* ========================================
+   CONTAINER & LAYOUT
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    /* Animation: fade in from top when page loads */
+    animation: fadeInDown 1s ease-out;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* Gradient text effect */
+    background: linear-gradient(45deg, #fbff00, #99ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #fbff00;
+    opacity: 0.8;
+}
+
+/* ========================================
+   PROFILES SECTION
+   ======================================== */
+
+.profiles-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap; /* Cards wrap on smaller screens */
+}
+
+.profile-card {
+    background-color: #1a1a1a; /* Dark gray background */
+    border: 2px solid #99ff00;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    /* Transition for smooth hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation: fade in with slight delay */
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Hover effect: card lifts up and glows */
+.profile-card:hover {
+    transform: translateY(-10px); /* Move up 10px */
+    box-shadow: 0 10px 30px #26370b; /* Yellow glow */
+}
+
+/* Second card gets delayed animation */
+.profile-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* ========================================
+   PHOTO SLOTS
+   ======================================== */
+
+.photo-slot {
+    margin-bottom: 20px;
+}
+
+.photo-placeholder img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%; /* Makes it circular */
+    background: linear-gradient(135deg, #fbff00, #99ff00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Transition for hover animation */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect: photo slot rotates and glows */
+.photo-placeholder:hover {
+    transform: scale(1.1) rotate(5deg); /* Grow and rotate slightly */
+    box-shadow: 0 0 25px #fbff00;
+}
+
+.initial {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ========================================
+   PROFILE INFO
+   ======================================== */
+
+.profile-name {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color:#fbff00;
+}
+
+.profile-description {
+    color: #cccccc;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.learn-more-btn {
+    background-color: #fbff00;
+    color: #000000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    /* Transition for smooth hover effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect: button changes color and grows */
+.learn-more-btn:hover {
+    background-color: #99ff00; /* Orange */
+    transform: scale(1.05); /* Slightly larger */
+}
+
+/* Click effect: button shrinks slightly */
+.learn-more-btn:active {
+    transform: scale(0.95);
+}
+
+/* ========================================
+   TOGETHER SECTION
+   ======================================== */
+
+.together-section {
+    text-align: center;
+    margin: 60px 0;
+    padding: 40px 20px;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards; /* Prevents flash before animation */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fbff00;
+}
+
+.together-photo-container {
+    display: inline-block;
+}
+
+.together-photo-slot {
+    margin-bottom: 20px;
+}
+
+.together-placeholder {
+    margin: 0 auto;
+    background: linear-gradient(135deg, #fbff00, #99ff00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Transition for hover animation */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    border-radius: 15px; /* Rounded square instead of circle */
+}
+
+.together-description {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #fbff00;
+    margin-top: 60px;
+    color: #888888;
+}
+
+/* ========================================
+   ANIMATIONS (Keyframes)
+   ======================================== */
+
+/* Fade in from top animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .profiles-section {
+        gap: 30px;
+    }
+
+    .profile-card {
+        max-width: 100%; /* Cards take full width on mobile */
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .together-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .header {
+        padding: 40px 10px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .photo-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .initial {
+        font-size: 3rem;
+    }
+
+    .together-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+}

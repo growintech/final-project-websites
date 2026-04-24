@@ -4,6 +4,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url("mappa-firenze.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 /* HEADER */
@@ -76,7 +81,8 @@ header {
 }
 
 .dark header,
-.dark footer {
+.dark footer,
+.dark box-title {
     background-color: green;
 }
 
@@ -93,35 +99,40 @@ main {
     flex: 1;
 }
 
-.map {
-    display: block;
-    width: 90%;
-    max-width: 1100px;
-    height: 300px;
-    margin: 20px auto;
-    margin-top: 40px;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 40px;
 }
 
-.map:hover {
-    transform: scale(1.03) translateY(-5px);
+.box {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 120px;
+}
+
+.box:hover {
+    transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-#countdown {
-    display: flex;
-    justify-content: center;
+.box-title {
+    background-color: #7fbf7f;
+    color: white;
+    margin: 0;
+    padding: 15px;
     font-size: 20px;
-    color: green;
 }
 
-.slogan {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;;
+.box-text {
+    padding: 20px;
+    color: #333;
+    font-size: 16px;
 }
 
 /* FOOTER */
@@ -142,7 +153,8 @@ footer {
         height: 50px;
     }
 
-    .map {
-        height: 160px;
+    .box-container {
+        flex-direction: column;
+        padding: 20px;
     }
 }

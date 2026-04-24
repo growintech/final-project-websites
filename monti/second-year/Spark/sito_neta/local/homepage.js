@@ -1,18 +1,29 @@
 // Gestione del menu su mobile
 function toggleMenu() {
-    let menu = document.getElementById("sidebar");
+    let menu = document.querySelector(".nav-wrapper");
     menu.classList.toggle("aperto");
 }
 
-function chiudiMenu() {
-    if (window.innerWidth <= 768) {
-        let menu = document.getElementById("sidebar");
-        menu.classList.remove("aperto");
+// Effetto scroll per l'header
+window.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
     }
-}
+});
 
 // Logica per le animazioni di Fade-in allo scroll
 document.addEventListener("DOMContentLoaded", function() {
+    // Chiudi menu mobile al click sui link
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            document.querySelector(".nav-wrapper").classList.remove("aperto");
+        });
+    });
+
     // Selezioniamo tutti gli elementi che hanno la classe 'fade-in'
     const elementiDaAnimare = document.querySelectorAll('.fade-in');
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accedi o Registrati - Spark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box fade-in visibile">
+            <h2>Accedi o Registrati</h2>
+            
+            <form class="login-form" id="form-accesso" onsubmit="gestisciAccesso(event)">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="cognome" placeholder="Cognome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="telefono" placeholder="Recapito telefonico" required>
+                
+                <button type="submit" class="btn-primario" style="width: 100%;">Registrati / Accedi</button>
+            </form>
+
+            <a href="site.html" class="torna-home"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
